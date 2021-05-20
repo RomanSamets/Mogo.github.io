@@ -171,7 +171,7 @@ font-family: 'Montserrat', sans-serif;
     height: 100vh;
     padding: 0;
     margin: auto;
-    background: url("Img/Layer 15.jpg") no-repeat center / cover;
+    background: url("Layer 15.jpg") no-repeat center / cover;
     overflow: hidden;
 }
 
@@ -786,7 +786,7 @@ font-family: 'Montserrat', sans-serif;
     width: 100%;
     margin: 0;
     padding: 0;
-    background: url("Img/Layer 45.jpg") no-repeat center / cover;
+    background: url("Layer 45.jpg") no-repeat center / cover;
     text-align: center;
     height: 850px;
 }
@@ -1321,7 +1321,7 @@ font-family: 'Montserrat', sans-serif;
 }
 
 .Eight .Inn{
-    background: url("Img/Layer 16.jpg") no-repeat center / cover;
+    background: url("Layer 16.jpg") no-repeat center / cover;
     position: relative;
     width: 380px;
     height: 470px;
@@ -1400,13 +1400,13 @@ font-family: 'Montserrat', sans-serif;
 }
 
 .Eight .OnM{
-    background: url("Img/Layer 16.jpg") no-repeat center / cover;
+    background: url("Layer 16.jpg") no-repeat center / cover;
 }
 .Eight .TwM{
-    background: url("Img/Layer 19.jpg") no-repeat center / cover;
+    background: url("Layer 19.jpg") no-repeat center / cover;
 }
 .Eight .ThM{
-    background: url("Img/Layer 18.jpg") no-repeat center / cover;
+    background: url("Layer 18.jpg") no-repeat center / cover;
 }
 
 .Eight .social .ico{
@@ -2024,7 +2024,7 @@ font-family: 'Montserrat', sans-serif;
 .Twelve{
     width: 100%;
     height: 830px;
-    background: url("Img/Layer 53.jpg") no-repeat center / cover;
+    background: url("Layer 53.jpg") no-repeat center / cover;
 
 }
 
@@ -2259,7 +2259,7 @@ font-family: 'Montserrat', sans-serif;
     position: relative;
     width: 100%;
     height: 200px;
-    background: url("Img/Layer 59 копія.jpg") no-repeat center / cover;
+    background: url("Layer 59 копія.jpg") no-repeat center / cover;
     margin-top: 20px;
     padding: 0;
 }
@@ -3165,17 +3165,17 @@ footer .photos .item9{
 /*---------------------------------------------FONTS -----------------------------------------*/
 @font-face {
     font-family: 'Roboto', sans-serif;
-    src: url(Fonts/Roboto.ttf) format("truetype");
+    src: url(Roboto.ttf) format("truetype");
 }
 
 @font-face {
     font-family: 'Kaushan Script', cursive;
-    src: url(Fonts/KaushanScr.ttf) format("truetype");
+    src: url(KaushanScr.ttf) format("truetype");
 }
 
 @font-face {
     font-family: 'Montserrat', sans-serif;
-    src: url(Fonts/montserrat.ttf) format("truetype");
+    src: url(montserrat.ttf) format("truetype");
 }
 
 /*<link rel="stylesheet" href="ipad-landscape.css" media="only screen and (min-device-width : 768px) and (max-device-width : 1024px) and orientation : landscape)">*/
