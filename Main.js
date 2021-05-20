@@ -381,14 +381,7 @@ function windResize() {
 
 
 
-function VISSCR(){
-    $('body').removeClass('HIDSCR');
-}
-
-
-
 $('document').ready(function () {
-    setTimeout(VISSCR, delayTime + 500);
     LOne.addClass('E');
     LTwo.addClass('E');
     LThird.addClass('E');
