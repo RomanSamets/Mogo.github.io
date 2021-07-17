@@ -611,8 +611,3 @@ $(window).on('load', function () {
     $('body').addClass('HIDSCR');
     $preloader.delay(delayTime).fadeOut(800);
 });
-
-function toggleOverlay () {
-    var overlay = document.querySelector("body");
-    overlay.classList.toggle('hide-overlay');
-}
