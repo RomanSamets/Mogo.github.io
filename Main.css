@@ -339,6 +339,40 @@ nav ul li svg{
     right: 0;
 }
 
+.scroll_icon {
+  width: 5px;
+  height: 100px;
+  position: fixed;
+  transform: translate(-50%, -100%);
+  background-color: white;
+  overflow: hidden;
+  left: 10%;
+  top: 100%;
+  transition: 1s;
+  transition-property: opacity, height;
+}
+
+.scroll_whiteVie {
+  background: #95e1d3;
+  opacity: 0;
+  width: 6px;
+    transform: translate(0%, -100%);
+  position: absolute;
+  height: 0px;
+  top: 100%;
+  animation: 1.5s cubic-bezier(.26,.6,.63,.84) infinite animSc;
+}
+@keyframes animSc {
+  0% {
+    height: 0px;
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    height: 100px;
+  }
+}
+
 
 
 /*-------------------------------------HOVER ANIMATION CSS ACTIVE CLASS------------------------*/
