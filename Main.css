@@ -1,7 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap');
-.OVERF {
-    overflow: overlay;
-}
 
 :root {
     --fs1: 9.375em; /*150px*/
@@ -121,7 +118,26 @@ body, html {
     -ms-transition: all .5s ease-in-out;
     -o-transition: all .5s ease-in-out;
     transition: all .5s ease-in-out;
-    overflow: hidden;
+    height: 100%;
+}
+
+.overlay{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    background-color: rgba(0, 0, 0, 0.8);
+
+    .overlay-content {
+        height: 100%;
+        overflow: scroll;
+    }
+}
+  
+.background-content{
+    height: 100%;
+    overflow: overlay;
 }
 
 span{
