@@ -611,6 +611,3 @@ function toggleOverlay () {
     var overlay = document.querySelector("body");
     overlay.classList.remove('BodyScLock');
 }
-
-toggleOverlay();
-
