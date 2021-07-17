@@ -31,7 +31,7 @@ var SearchSvg = $('#SearchSVG');
 
 let delayTime = 2000;
 
-
+var scrollIc = document.querySelector(".scroll_icon");
 
 var AboutLi      =  $('#NavAbout');
 var ServiceLi    =  $('#NavServices');
@@ -611,3 +611,9 @@ function toggleOverlay () {
     var overlay = document.querySelector("body");
     overlay.classList.remove('BodyScLock');
 }
+
+document.addEventListener("scroll", function() {
+  if(window.scrollY > 0) {
+    scrollIc.style.opacity = 0;} 
+  else {scrollIc.style.opacity = 1;} 
+});
