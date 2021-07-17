@@ -121,7 +121,6 @@ body, html {
     -ms-transition: all .5s ease-in-out;
     -o-transition: all .5s ease-in-out;
     transition: all .5s ease-in-out;
-    overflow:hidden;
 }
 
 span{
