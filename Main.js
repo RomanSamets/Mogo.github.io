@@ -616,5 +616,6 @@ Visible (element);
 $(window).on('load', function () {
     var $preloader = $('#preLoader');
     $('body').addClass('HIDSCR');
+    $('body').css("overflow", "overlay");
     $preloader.delay(delayTime).fadeOut(800);
 });
