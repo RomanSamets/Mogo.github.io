@@ -341,7 +341,9 @@ window.addEventListener("resize", function () {
     windResize();
 });
 
-
+document.addEventListener("DOMContentLoaded", function() {
+    $('body').css("overflow", "overlay");
+});
 
 
 function windResize() {
