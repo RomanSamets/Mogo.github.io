@@ -341,10 +341,6 @@ window.addEventListener("resize", function () {
     windResize();
 });
 
-document.addEventListener("DOMContentLoaded", function() {
-    $('body').css("position", "relative");
-});
-
 
 function windResize() {
     windowWidth = window.innerWidth;
