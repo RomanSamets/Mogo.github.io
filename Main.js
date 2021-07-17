@@ -60,10 +60,6 @@ var TopOffset;
 
 
 
-$('body').css("overflow", "hidden");
-
-
-
 // Получаем нужный элемент
 
 
