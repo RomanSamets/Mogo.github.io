@@ -112,7 +112,6 @@ body, html {
     padding: 0;
     width: 100%;
     scroll-behavior: smooth;
-    position: fixed;
     -webkit-transition: all .5s ease-in-out;
     -moz-transition: all .5s ease-in-out;
     -ms-transition: all .5s ease-in-out;
@@ -120,6 +119,10 @@ body, html {
     transition: all .5s ease-in-out;
     height: 100%;
     overflow: overlay;
+}
+
+.BodyScLock {
+  position: fixed;
 }
 
 span{
