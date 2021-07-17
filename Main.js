@@ -604,12 +604,14 @@ Visible (element);
 
 
 
-
-
-
-
 $(window).on('load', function () {
     var $preloader = $('#preLoader');
     $('body').addClass('HIDSCR');
     $preloader.delay(delayTime).fadeOut(800);
 });
+
+function toggleOverlay () {
+    var overlay = document.querySelector("body");
+    overlay.classList.toggle('BodyScLock');
+}
+
