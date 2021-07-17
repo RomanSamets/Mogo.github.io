@@ -609,7 +609,10 @@ Visible (element);
 $(window).on('load', function () {
     var $preloader = $('#preLoader');
     $('body').addClass('HIDSCR');
-    $('body').addClass("OVERF");
-    $('body').css("overflow", "overlay");
     $preloader.delay(delayTime).fadeOut(800);
 });
+
+function toggleOverlay () {
+    var overlay = document.querySelector("body");
+    overlay.classList.toggle('hide-overlay');
+}
