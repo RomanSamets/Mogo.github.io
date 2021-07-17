@@ -60,10 +60,7 @@ var TopOffset;
 
 
 
-
-
-
-
+$('body').css("overflow", "hidden");
 
 
 
@@ -617,5 +614,6 @@ $(window).on('load', function () {
     var $preloader = $('#preLoader');
     $('body').addClass('HIDSCR');
     $('body').addClass("OVERF");
+    $('body').css("overflow", "overlay");
     $preloader.delay(delayTime).fadeOut(800);
 });
