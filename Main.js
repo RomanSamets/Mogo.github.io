@@ -342,7 +342,7 @@ window.addEventListener("resize", function () {
 });
 
 document.addEventListener("DOMContentLoaded", function() {
-    $('body').css("overflow", "overlay");
+    $('body').css("position", "relative");
 });
 
 
