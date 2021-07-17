@@ -608,6 +608,6 @@ $(window).on('load', function () {
 
 function toggleOverlay () {
     var overlay = document.querySelector("body");
-    overlay.classList.toggle('BodyScLock');
+    overlay.classList.remove('BodyScLock');
 }
 
