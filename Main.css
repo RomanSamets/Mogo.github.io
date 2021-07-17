@@ -117,12 +117,12 @@ body, html {
     -ms-transition: all .5s ease-in-out;
     -o-transition: all .5s ease-in-out;
     transition: all .5s ease-in-out;
-    height: 100%;
-    overflow: overlay;
+    height: 100%;   
 }
 
 .BodyScLock {
   position: fixed;
+  overflow: overlay;
 }
 
 span{
