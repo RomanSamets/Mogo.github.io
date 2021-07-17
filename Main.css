@@ -34,7 +34,6 @@
 
 ::-webkit-scrollbar-track {
     background: rgba(0, 0, 0, 0.0);
-    border-radius: 50px;
 }
 
 
@@ -119,7 +118,6 @@ body, html {
     transition: all .5s ease-in-out;
     height: 100%; 
     position: relative;
-    overflow: overlay;
 }
 
 .BodyScLock {
