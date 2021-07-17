@@ -604,10 +604,13 @@ $(window).on('load', function () {
     var $preloader = $('#preLoader');
     $('body').addClass('HIDSCR');
     $preloader.delay(delayTime).fadeOut(800);
+    toggleOverlay();
 });
 
 function toggleOverlay () {
     var overlay = document.querySelector("body");
     overlay.classList.remove('BodyScLock');
 }
+
+toggleOverlay();
 
