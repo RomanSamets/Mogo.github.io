@@ -344,9 +344,9 @@ nav ul li svg{
   height: 100px;
   position: fixed;
   transform: translate(-50%, -100%);
-  background-color: white;
+  background-color: transparent;
   overflow: hidden;
-  left: 10%;
+  left: 50%;
   top: 100%;
   transition: 1s;
   transition-property: opacity, height;
