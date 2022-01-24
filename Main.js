@@ -6,72 +6,56 @@
 //         \/               \/          \/
 
 
+var OB          = $('#OB'),
+ LOne        = $('#LineOne'),
+ LTwo        = $('#LineTwo'),
+ LThird      = $('#LineThird'),
+ isClicked   = false,
+ timing      = 'cubic-bezier(.21,.07,.19,.89)',
+ dur         = 0.6,
+ hov         = false,
+ a           = $("#comments"),
+ b           = $("#commentsTwo"),
+ ClassA      = $(".A"),
+ ClassB      = $(".B"),
+ ClassC      = $(".C"),
+ head        = $('header'),
+ nav         = $('.nav-item'),
+ windowWidth,
+ minWidth    = 1150;
 
-var OB          = $('#OB');
-var LOne        = $('#LineOne');
-var LTwo        = $('#LineTwo');
-var LThird      = $('#LineThird');
-var isClicked   = false;
-var timing      = 'cubic-bezier(.21,.07,.19,.89)';
-var dur         = 0.6;
-var hov         = false;
-var a           = $("#comments");
-var b           = $("#commentsTwo");
-var ClassA      = $(".A");
-var ClassB      = $(".B");
-var ClassC      = $(".C");
-var head        = $('header');
-var nav         = $('.nav-item');
-var windowWidth;
-var minWidth    = 1150;
 const counters = document.querySelectorAll('.NUM');
 const speed = 800000000;
+
 var ShopSvg = $('#ShopSVG');
 var SearchSvg = $('#SearchSVG');
-
 let delayTime = 2000;
-
 var scrollIc = document.querySelector(".scroll_icon");
-
 var AboutLi      =  $('#NavAbout');
 var ServiceLi    =  $('#NavServices');
 var WorkLi       =  $('#NavWork');
 var BlogLi       =  $('#NavBlog');
 var ContactLi    =  $('#NavContact');
-
 var element = document.querySelector('#Els');
-
-
 var AboutVis = document.querySelector('#AboutVis');
-
-
 var serviceVis = document.querySelector('#servicesOffset');
 var ServicesOffset;
-
-
 var WorkVis = document.querySelector('#WorkOffset');
 var WorkOffset;
-
 var BlogVis = document.querySelector('#BlogOffset');
 var BlogOffset;
-
-
 var TopOffset;
 
 
-
-// Получаем нужный элемент
-
-
 var AboutVisible = function (AoutEl) {
-    // Все позиции элемента
+    
     var targetPosition = {
             top: window.pageYOffset + AoutEl.getBoundingClientRect().top,
             left: window.pageXOffset + AoutEl.getBoundingClientRect().left,
             right: window.pageXOffset + AoutEl.getBoundingClientRect().right,
             bottom: window.pageYOffset + AoutEl.getBoundingClientRect().bottom
         },
-        // Получаем позиции окна
+
         windowPosition = {
             top: window.pageYOffset,
             left: window.pageXOffset,
@@ -79,12 +63,10 @@ var AboutVisible = function (AoutEl) {
             bottom: window.pageYOffset + document.documentElement.clientHeight
         };
 
-    if (targetPosition.bottom > windowPosition.top && // Если позиция нижней части элемента больше позиции верхней чайти окна, то элемент виден сверху
-        targetPosition.top < windowPosition.bottom && // Если позиция верхней части элемента меньше позиции нижней чайти окна, то элемент виден снизу
-        targetPosition.right > windowPosition.left && // Если позиция правой стороны элемента больше позиции левой части окна, то элемент виден слева
-        targetPosition.left < windowPosition.right) { // Если позиция левой стороны элемента меньше позиции правой чайти окна, то элемент виден справа
-        // Если элемент полностью видно, то запускаем следующий код
-
+    if (targetPosition.bottom > windowPosition.top && 
+        targetPosition.top < windowPosition.bottom && 
+        targetPosition.right > windowPosition.left && 
+        targetPosition.left < windowPosition.right) { 
 
         AboutLi.addClass('Active');
         ServiceLi.removeClass('Active');
@@ -93,28 +75,21 @@ var AboutVisible = function (AoutEl) {
         ContactLi.removeClass('Active');
 
     } else {
-        // Если элемент не видно, то запускаем этот код
+        
     };
 };
 
-// А также запустим функцию сразу. А то вдруг, элемент изначально видно
 AboutVisible (AboutVis);
 
 
-
-
-// Получаем нужный элемент
-
-
 var ServicesVisible = function (ServiceEl) {
-    // Все позиции элемента
     var targetPosition = {
             top: window.pageYOffset + ServiceEl.getBoundingClientRect().top,
             left: window.pageXOffset + ServiceEl.getBoundingClientRect().left,
             right: window.pageXOffset + ServiceEl.getBoundingClientRect().right,
             bottom: window.pageYOffset + ServiceEl.getBoundingClientRect().bottom
         },
-        // Получаем позиции окна
+
         windowPosition = {
             top: window.pageYOffset,
             left: window.pageXOffset,
@@ -122,12 +97,11 @@ var ServicesVisible = function (ServiceEl) {
             bottom: window.pageYOffset + document.documentElement.clientHeight
         };
 
-    if (targetPosition.bottom > windowPosition.top && // Если позиция нижней части элемента больше позиции верхней чайти окна, то элемент виден сверху
-        targetPosition.top < windowPosition.bottom && // Если позиция верхней части элемента меньше позиции нижней чайти окна, то элемент виден снизу
-        targetPosition.right > windowPosition.left && // Если позиция правой стороны элемента больше позиции левой части окна, то элемент виден слева
-        targetPosition.left < windowPosition.right) { // Если позиция левой стороны элемента меньше позиции правой чайти окна, то элемент виден справа
-        // Если элемент полностью видно, то запускаем следующий код
-
+    if (targetPosition.bottom > windowPosition.top && 
+        targetPosition.top < windowPosition.bottom && 
+        targetPosition.right > windowPosition.left &&
+        targetPosition.left < windowPosition.right) { 
+    
         AboutLi.removeClass('Active');
         ServiceLi.addClass('Active');
         WorkLi.removeClass('Active');
@@ -135,28 +109,22 @@ var ServicesVisible = function (ServiceEl) {
         ContactLi.removeClass('Active');
 
     } else {
-        // Если элемент не видно, то запускаем этот код
+
     };
 };
 
-// А также запустим функцию сразу. А то вдруг, элемент изначально видно
 ServicesVisible (serviceVis);
 
 
-
-
-// Получаем нужный элемент
-
-
 var WorkVisible = function (WorkEl) {
-    // Все позиции элемента
+
     var targetPosition = {
             top: window.pageYOffset + WorkEl.getBoundingClientRect().top,
             left: window.pageXOffset + WorkEl.getBoundingClientRect().left,
             right: window.pageXOffset + WorkEl.getBoundingClientRect().right,
             bottom: window.pageYOffset + WorkEl.getBoundingClientRect().bottom
         },
-        // Получаем позиции окна
+
         windowPosition = {
             top: window.pageYOffset,
             left: window.pageXOffset,
@@ -164,11 +132,11 @@ var WorkVisible = function (WorkEl) {
             bottom: window.pageYOffset + document.documentElement.clientHeight
         };
 
-    if (targetPosition.bottom > windowPosition.top && // Если позиция нижней части элемента больше позиции верхней чайти окна, то элемент виден сверху
-        targetPosition.top < windowPosition.bottom && // Если позиция верхней части элемента меньше позиции нижней чайти окна, то элемент виден снизу
-        targetPosition.right > windowPosition.left && // Если позиция правой стороны элемента больше позиции левой части окна, то элемент виден слева
-        targetPosition.left < windowPosition.right) { // Если позиция левой стороны элемента меньше позиции правой чайти окна, то элемент виден справа
-        // Если элемент полностью видно, то запускаем следующий код
+    if (targetPosition.bottom > windowPosition.top && 
+        targetPosition.top < windowPosition.bottom && 
+        targetPosition.right > windowPosition.left && 
+        targetPosition.left < windowPosition.right) { 
+        
         AboutLi.removeClass('Active');
         ServiceLi.removeClass('Active');
         WorkLi.addClass('Active');
@@ -177,30 +145,22 @@ var WorkVisible = function (WorkEl) {
 
 
     } else {
-        // Если элемент не видно, то запускаем этот код
+        
     };
 };
 
-// А также запустим функцию сразу. А то вдруг, элемент изначально видно
 WorkVisible (WorkVis);
 
 
-
-
-
-
-// Получаем нужный элемент
-
-
 var BlogVisible = function (BlogEl) {
-    // Все позиции элемента
+
     var targetPosition = {
             top: window.pageYOffset + BlogEl.getBoundingClientRect().top,
             left: window.pageXOffset + BlogEl.getBoundingClientRect().left,
             right: window.pageXOffset + BlogEl.getBoundingClientRect().right,
             bottom: window.pageYOffset + BlogEl.getBoundingClientRect().bottom
         },
-        // Получаем позиции окна
+
         windowPosition = {
             top: window.pageYOffset,
             left: window.pageXOffset,
@@ -208,31 +168,22 @@ var BlogVisible = function (BlogEl) {
             bottom: window.pageYOffset + document.documentElement.clientHeight
         };
 
-    if (targetPosition.bottom > windowPosition.top && // Если позиция нижней части элемента больше позиции верхней чайти окна, то элемент виден сверху
-        targetPosition.top < windowPosition.bottom && // Если позиция верхней части элемента меньше позиции нижней чайти окна, то элемент виден снизу
-        targetPosition.right > windowPosition.left && // Если позиция правой стороны элемента больше позиции левой части окна, то элемент виден слева
-        targetPosition.left < windowPosition.right) { // Если позиция левой стороны элемента меньше позиции правой чайти окна, то элемент виден справа
-        // Если элемент полностью видно, то запускаем следующий код
+    if (targetPosition.bottom > windowPosition.top &&
+        targetPosition.top < windowPosition.bottom && 
+        targetPosition.right > windowPosition.left && 
+        targetPosition.left < windowPosition.right) { 
+        
         AboutLi.removeClass('Active');
         ServiceLi.removeClass('Active');
         WorkLi.removeClass('Active');
         BlogLi.addClass('Active');
         ContactLi.removeClass('Active');
     } else {
-        // Если элемент не видно, то запускаем этот код
+       
     };
 };
 
-// А также запустим функцию сразу. А то вдруг, элемент изначально видно
 BlogVisible (BlogVis);
-
-
-
-
-
-
-
-
 
 
 window.addEventListener("scroll", function () {
@@ -304,10 +255,6 @@ function SearchFunc(){
 
 }
 
-
-
-
-
 function Scroll() {
 
     setTimeout(UU, 1000);
@@ -327,15 +274,10 @@ function Scroll() {
                     count.innerText = target;
                 }
             }
-
             updateCount();
         });
     }
-
-
 }
-
-
 
 window.addEventListener("resize", function () {
     windResize();
@@ -368,9 +310,6 @@ function windResize() {
     }
 
 }
-
-
-
 
 $('document').ready(function () {
     LOne.addClass('E');
@@ -501,14 +440,6 @@ $('document').ready(function () {
 });
 
 
-
-
-
-
-
-
-
-
 function R(){
     a.addClass("svipeR");
     a.removeClass("svipeL");
@@ -557,26 +488,13 @@ function C (){
 }
 
 
-
-
-
-
-
-
-
-
-// Получаем нужный элемент
-
-
 var Visible = function (target) {
-    // Все позиции элемента
     var targetPosition = {
             top: window.pageYOffset + target.getBoundingClientRect().top,
             left: window.pageXOffset + target.getBoundingClientRect().left,
             right: window.pageXOffset + target.getBoundingClientRect().right,
             bottom: window.pageYOffset + target.getBoundingClientRect().bottom
         },
-        // Получаем позиции окна
         windowPosition = {
             top: window.pageYOffset,
             left: window.pageXOffset,
@@ -584,21 +502,18 @@ var Visible = function (target) {
             bottom: window.pageYOffset + document.documentElement.clientHeight
         };
 
-    if (targetPosition.bottom > windowPosition.top && // Если позиция нижней части элемента больше позиции верхней чайти окна, то элемент виден сверху
-        targetPosition.top < windowPosition.bottom && // Если позиция верхней части элемента меньше позиции нижней чайти окна, то элемент виден снизу
-        targetPosition.right > windowPosition.left && // Если позиция правой стороны элемента больше позиции левой части окна, то элемент виден слева
-        targetPosition.left < windowPosition.right) { // Если позиция левой стороны элемента меньше позиции правой чайти окна, то элемент виден справа
-        // Если элемент полностью видно, то запускаем следующий код
+    if (targetPosition.bottom > windowPosition.top && 
+        targetPosition.top < windowPosition.bottom && 
+        targetPosition.right > windowPosition.left &&
+        targetPosition.left < windowPosition.right) {
+        
         Scroll();
     } else {
-        // Если элемент не видно, то запускаем этот код
+        
     };
 };
 
-// А также запустим функцию сразу. А то вдруг, элемент изначально видно
 Visible (element);
-
-
 
 $(window).on('load', function () {
     var $preloader = $('#preLoader');
